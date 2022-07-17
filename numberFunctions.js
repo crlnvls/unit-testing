@@ -8,7 +8,11 @@ const getLargest = (a, b, c) => {
   //   } else if (c > a) {
   //     return c;
   //   }
-  return Math.max(a, b, c);
+  if (a && b && c) {
+    return Math.max(a, b, c);
+  } else {
+    throw "ERROR: all inputs must have a value";
+  }
 };
 
 // console.log(getLargest(3, 6, 1));

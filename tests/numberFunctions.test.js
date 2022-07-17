@@ -20,6 +20,14 @@ describe("getLargest", () => {
     expect(typeof getLargest).toBe("function");
   });
 
+  describe("It reports invalid inputs correctly", () => {
+    test("It throws an error if one of the three inputs is undefined", () => {
+      expect(() => {
+        getLargest(1, 2);
+      }).toThrow("ERROR: all inputs must have a value");
+    });
+  });
+
   describe("It handles normal inputs successfully", () => {
     each([
       [[1, 2, 3], 3],
