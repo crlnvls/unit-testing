@@ -18,4 +18,11 @@ const getSmallest = (a, b, c) => {
 };
 
 // Export the function so it's available to other files
-module.exports = getLargest;
+// Export one function -->
+// module.exports = getLargest;
+
+// Exports multi functions -->
+module.exports = {
+  getLargest,
+  getSmallest,
+};
