@@ -13,5 +13,9 @@ const getLargest = (a, b, c) => {
 
 // console.log(getLargest(3, 6, 1));
 
+const getSmallest = (a, b, c) => {
+  return Math.min(a, b, c);
+};
+
 // Export the function so it's available to other files
 module.exports = getLargest;
