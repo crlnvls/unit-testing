@@ -1,6 +1,6 @@
 const each = require("jest-each").default;
 
-const getLargest = require("../numberFunctions");
+const { getLargest, getSmallest } = require("../numberFunctions");
 
 // console.log(getLargest);
 
@@ -27,6 +27,22 @@ describe("getLargest", () => {
       [[12, 36, 19], 36],
     ]).test("%s -> %s", (arr, expected) => {
       expect(getLargest(...arr)).toEqual(expected);
+    });
+  });
+});
+
+describe("getSmallest", () => {
+  test("It is a function", () => {
+    expect(typeof getSmallest).toBe("function");
+  });
+
+  describe("It handles normal inputs successfully", () => {
+    each([
+      [[1, 2, 3], 1],
+      [[9, 8, 7], 7],
+      [[12, 36, 19], 12],
+    ]).test("%s -> %s", (arr, expected) => {
+      expect(getSmallest(...arr)).toEqual(expected);
     });
   });
 });
